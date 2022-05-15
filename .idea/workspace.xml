@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create database init file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create database handler class">
       <change afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,20 @@
       <command value="gradle assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.UserDaoTest.testAdd (1)">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.moringaschool.Main" />
+      <module name="OrganisationalNewsPortal.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moringaschool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrganisationalNewsPortal [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -111,18 +125,39 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrganisationalNewsPortal [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrganisationalNewsPortal [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrganisationalNewsPortal [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -158,8 +193,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserDaoTest.testAdd (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.OrganisationalNewsPortal [dependencies]" />
+        <item itemvalue="Gradle.OrganisationalNewsPortal [test]" />
         <item itemvalue="Gradle.OrganisationalNewsPortal [assemble]" />
-        <item itemvalue="Gradle.OrganisationalNewsPortal [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652476835995</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="patch: It will create database handler class">
+      <created>1652511601275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652511601275</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +303,7 @@
     <MESSAGE value="patch: It will create User DAO implementing User Interface" />
     <MESSAGE value="patch: It will create Department DAO implementing Department Interface" />
     <MESSAGE value="patch: It will create database init file" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create database init file" />
+    <MESSAGE value="patch: It will create database handler class" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create database handler class" />
   </component>
 </project>

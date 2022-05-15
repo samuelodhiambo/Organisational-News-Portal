@@ -15,7 +15,7 @@ public class DB {
                     " position VARCHAR,\n" +
                     " role VARCHAR,\n" +
                     " department int\n" +
-                    ");").executeUpdate();
+                    ")").executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);
             throw new RuntimeException();

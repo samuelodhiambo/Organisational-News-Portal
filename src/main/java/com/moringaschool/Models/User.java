@@ -7,27 +7,26 @@ public class User {
     private String username;
     private String position;
     private String role;
+    private int department;
+
+    public User(String username, String position, String role, int department) {
+        this.username = username;
+        this.position = position;
+        this.role = role;
+        this.department = department;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return getId() == user.getId() && getUsername().equals(user.getUsername()) && getPosition().equals(user.getPosition()) && getRole().equals(user.getRole()) && getDepartment().equals(user.getDepartment());
+        return getId() == user.getId() && department == user.department && getUsername().equals(user.getUsername()) && getPosition().equals(user.getPosition()) && getRole().equals(user.getRole());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getPosition(), getRole(), getDepartment());
-    }
-
-    private Department department;
-
-    public User(String username, String position, String role, Department department) {
-        this.username = username;
-        this.position = position;
-        this.role = role;
-        this.department = department;
+        return Objects.hash(getId(), getUsername(), getPosition(), getRole(), department);
     }
 
     public void setId(int id) {
@@ -50,7 +49,7 @@ public class User {
         return role;
     }
 
-    public Department getDepartment() {
+    public int getDepartment() {
         return department;
     }
 }
