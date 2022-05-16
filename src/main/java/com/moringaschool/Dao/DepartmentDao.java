@@ -49,12 +49,20 @@ public class DepartmentDao implements DepartmentInterface {
 
     @Override
     public Department findById(int id) {
-        return null;
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery("SELECT * FROM departments WHERE id=:id").addParameter("id", id).executeAndFetchFirst(Department.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
     public void update(int id, Department department) {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("UPDATE departments SET departmentname=:departmentname, description=:description, numberofemployees=:numberofemployees WHERE id=:id").bind(department).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override

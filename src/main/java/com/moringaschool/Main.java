@@ -52,6 +52,7 @@ public class Main {
 
         post("/user/:id/update", "application/json", (request, response) -> {
             User user = gson.fromJson(request.body(), User.class);
+            user.setId(Integer.parseInt(request.params("id")));
             userDao.update(Integer.parseInt(request.params("id")), user);
             response.status(201);
             response.type("application/json");
@@ -93,7 +94,9 @@ public class Main {
 
         post("/department/:id/update", "application/json", (request, response) -> {
             Department department = gson.fromJson(request.body(), Department.class);
+            department.setId(Integer.parseInt(request.params("id")));
             departmentDao.update(Integer.parseInt(request.params("id")), department);
+            System.out.println(department.getId());
             response.status(201);
             response.type("application/json");
             return gson.toJson(department);
