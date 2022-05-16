@@ -58,8 +58,12 @@ public class UserDao implements UserInterface {
     }
 
     @Override
-    public void update(int id) {
-
+    public void update(int id, User user) {
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("UPDATE users SET role=:role, department=:department, position=:position, username=:username WHERE id=:id").bind(user).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override

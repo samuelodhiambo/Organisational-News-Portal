@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add post rout for adding user">
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add DAO and route for viewing a specific user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Interfaces/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Interfaces/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +291,49 @@
       <option name="project" value="LOCAL" />
       <updated>1652683610151</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="patch: It will add post route for adding user">
+      <created>1652683694857</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652683694857</updated>
+    </task>
+    <task id="LOCAL-00014" summary="patch: It will optimize insertion query">
+      <created>1652683766291</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652683766291</updated>
+    </task>
+    <task id="LOCAL-00015" summary="patch: It will optimize test for adding user">
+      <created>1652683791119</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652683791119</updated>
+    </task>
+    <task id="LOCAL-00016" summary="patch: It will add API exception class">
+      <created>1652685794431</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652685794431</updated>
+    </task>
+    <task id="LOCAL-00017" summary="patch: It will add DAO and rout for viewing all users">
+      <created>1652685820699</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652685820699</updated>
+    </task>
+    <task id="LOCAL-00018" summary="patch: It will add DAO and route for viewing a specific user">
+      <created>1652687024306</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652687024306</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,7 +361,13 @@
     <MESSAGE value="fix: It will fix database execute update exception" />
     <MESSAGE value="fix: It will add Gson dependency" />
     <MESSAGE value="patch: It will add post rout for adding user" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add post rout for adding user" />
+    <MESSAGE value="patch: It will add post route for adding user" />
+    <MESSAGE value="patch: It will optimize insertion query" />
+    <MESSAGE value="patch: It will optimize test for adding user" />
+    <MESSAGE value="patch: It will add API exception class" />
+    <MESSAGE value="patch: It will add DAO and rout for viewing all users" />
+    <MESSAGE value="patch: It will add DAO and route for viewing a specific user" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add DAO and route for viewing a specific user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

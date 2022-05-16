@@ -12,7 +12,7 @@ public interface UserInterface {
 
     User findById(int id);
 
-    void update(int id);
+    void update(int id, User user);
 
     void deleteById(int id);
 

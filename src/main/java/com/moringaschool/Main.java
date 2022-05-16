@@ -47,6 +47,15 @@ public class Main {
             }
         });
 
+        post("/user/:id/update/username", "application/json", (request, response) -> {
+            User user = gson.fromJson(request.body(), User.class);
+//            user.setId(Integer.parseInt(request.params("id")));
+            userDao.update(Integer.parseInt(request.params("id")), user);
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(user);
+        });
+
 
     }
 }
