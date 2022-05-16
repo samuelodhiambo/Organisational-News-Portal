@@ -31,7 +31,6 @@ public class UserDao implements UserInterface {
                 "    :username)\n" +
                 "";
         try(Connection conn = DB.sql2o.open()) {
-            System.out.println(conn.createQuery(sql, true).getParamNameToIdxMap());
             int id = (int) conn.createQuery(sql, true).bind(user).executeUpdate().getKey();
             user.setId(id);
         } catch (Sql2oException e) {
