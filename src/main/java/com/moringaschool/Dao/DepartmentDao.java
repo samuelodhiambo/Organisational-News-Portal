@@ -3,6 +3,7 @@ package com.moringaschool.Dao;
 import com.moringaschool.Database.DB;
 import com.moringaschool.Interfaces.DepartmentInterface;
 import com.moringaschool.Models.Department;
+import com.moringaschool.Models.User;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
@@ -39,7 +40,11 @@ public class DepartmentDao implements DepartmentInterface {
 
     @Override
     public List<Department> findAll(Connection conn) {
-        return null;
+        try {
+            return conn.createQuery("SELECT * FROM departments").executeAndFetch(Department.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override

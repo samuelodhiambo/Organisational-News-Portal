@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add routes for department">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add logic to handle add department">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/Department.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652734000073</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="patch: It will optimize member properties namings to match database">
+      <created>1652735117015</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652735117015</updated>
+    </task>
+    <task id="LOCAL-00023" summary="patch: It will add logic to handle add department">
+      <created>1652735162186</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1652735162186</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,7 +402,9 @@
     <MESSAGE value="patch: It will add DAO and route for updating a specific user details" />
     <MESSAGE value="patch: It will add DAO and route for deleting a specific user" />
     <MESSAGE value="patch: It will add routes for department" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add routes for department" />
+    <MESSAGE value="patch: It will optimize member properties namings to match database" />
+    <MESSAGE value="patch: It will add logic to handle add department" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add logic to handle add department" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
