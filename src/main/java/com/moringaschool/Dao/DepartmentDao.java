@@ -1,9 +1,11 @@
 package com.moringaschool.Dao;
 
+import com.moringaschool.Database.DB;
 import com.moringaschool.Interfaces.DepartmentInterface;
 import com.moringaschool.Models.Department;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import org.sql2o.Sql2oException;
 
 import java.util.List;
 
@@ -16,7 +18,23 @@ public class DepartmentDao implements DepartmentInterface {
 
     @Override
     public void add(Department department) {
-
+        String sql = "";
+        sql = "insert into departments (\n" +
+                "    departmentname,\n" +
+                "    description,\n" +
+                "    numberofemployees)\n" +
+                "values (\n" +
+                "    :departmentname,\n" +
+                "    :description,\n" +
+                "    :numberofemployees)\n" +
+                ";";
+        try(Connection conn = DB.sql2o.open()) {
+            int id = (int) conn.createQuery(sql, true).bind(department).executeUpdate().getKey();
+            department.setId(id);
+        } catch (Sql2oException e) {
+            System.out.println(e);
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

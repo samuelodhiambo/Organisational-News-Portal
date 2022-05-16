@@ -25,7 +25,7 @@ public class Main {
         Gson gson = new Gson();
 
         // User
-        post("/add/user", "application/json", (request, response) -> {
+        post("/user/add", "application/json", (request, response) -> {
             User user = gson.fromJson(request.body(), User.class);
             userDao.add(user);
             response.status(201);
@@ -66,7 +66,7 @@ public class Main {
         });
 
         // Department
-        post("/add/department", "application/json", (request, response) -> {
+        post("/department/add", "application/json", (request, response) -> {
             Department department = gson.fromJson(request.body(), Department.class);
             departmentDao.add(department);
             response.status(201);
