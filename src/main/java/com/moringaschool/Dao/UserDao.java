@@ -68,11 +68,19 @@ public class UserDao implements UserInterface {
 
     @Override
     public void deleteById(int id) {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM users WHERE id=:id").addParameter("id", id).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
     public void clearAll() {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM users").executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
