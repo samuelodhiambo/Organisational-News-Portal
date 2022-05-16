@@ -38,6 +38,15 @@ public class Main {
             return gson.toJson(userDao.findAll(conn));
         });
 
+        get("/view/:id/user", "application/json", (request, response) -> {
+            User user = userDao.findById(Integer.parseInt(request.params("id")));
+            if (user != null) {
+                return gson.toJson(user);
+            } else {
+                throw new ApiException(404, String.format("User not found"));
+            }
+        });
+
 
     }
 }

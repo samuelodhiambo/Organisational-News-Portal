@@ -50,7 +50,11 @@ public class UserDao implements UserInterface {
 
     @Override
     public User findById(int id) {
-        return null;
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery("SELECT * FROM users WHERE id=:id").addParameter("id", id).executeAndFetchFirst(User.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
