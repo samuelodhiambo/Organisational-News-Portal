@@ -41,7 +41,11 @@ public class UserDao implements UserInterface {
 
     @Override
     public List<User> findAll(Connection conn) {
-        return null;
+        try {
+            return conn.createQuery("SELECT * FROM users").executeAndFetch(User.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
