@@ -1,5 +1,6 @@
 package com.moringaschool;
 
+import com.moringaschool.Dao.DepartmentDao;
 import com.moringaschool.Dao.UserDao;
 import com.moringaschool.Database.DB;
 import com.moringaschool.Exceptions.ApiException;
@@ -16,12 +17,14 @@ import java.util.List;
 
 public class Main {
     private static UserDao userDao = new UserDao(DB.sql2o);
+    private static DepartmentDao departmentDao = new DepartmentDao(DB.sql2o);
 
     private static Connection conn = DB.sql2o.open();
     public static void main(String[] args) {
         DB.createTables(DB.sql2o.open());
         Gson gson = new Gson();
 
+        // User
         post("/add/user", "application/json", (request, response) -> {
             User user = gson.fromJson(request.body(), User.class);
             userDao.add(user);
@@ -49,7 +52,6 @@ public class Main {
 
         post("/user/:id/update", "application/json", (request, response) -> {
             User user = gson.fromJson(request.body(), User.class);
-//            user.setId(Integer.parseInt(request.params("id")));
             userDao.update(Integer.parseInt(request.params("id")), user);
             response.status(201);
             response.type("application/json");
@@ -63,6 +65,46 @@ public class Main {
             return gson.toJson(userDao.findAll(conn));
         });
 
+        // Department
+        post("/add/department", "application/json", (request, response) -> {
+            Department department = gson.fromJson(request.body(), Department.class);
+            departmentDao.add(department);
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(department);
+        });
+
+        get("/department/:id/view", "application/json", (request, response) -> {
+            Department department = departmentDao.findById(Integer.parseInt(request.params("id")));
+            if (department != null) {
+                return gson.toJson(department);
+            } else {
+                throw new ApiException(404, String.format("Department not found"));
+            }
+        });
+
+        get("/view/department", "application/json", (request, response) -> {
+            List<Department> departments = departmentDao.findAll(conn);
+            if (departments.size() < 1) {
+                throw new ApiException(404, String.format("No departments found"));
+            }
+            return gson.toJson(departmentDao.findAll(conn));
+        });
+
+        post("/department/:id/update", "application/json", (request, response) -> {
+            Department department = gson.fromJson(request.body(), Department.class);
+            departmentDao.update(Integer.parseInt(request.params("id")), department);
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(department);
+        });
+
+        get("/delete/:id/department", "application/json", (request, response) -> {
+            departmentDao.deleteById(Integer.parseInt(request.params("id")));
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(departmentDao.findAll(conn));
+        });
 
     }
 }

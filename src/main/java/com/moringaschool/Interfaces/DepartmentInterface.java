@@ -12,7 +12,7 @@ public interface DepartmentInterface {
 
     Department findById(int id);
 
-    void update(int id);
+    void update(int id, Department department);
 
     void deleteById(int id);
 

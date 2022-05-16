@@ -30,7 +30,7 @@ public class DepartmentDao implements DepartmentInterface {
     }
 
     @Override
-    public void update(int id) {
+    public void update(int id, Department department) {
 
     }
 
