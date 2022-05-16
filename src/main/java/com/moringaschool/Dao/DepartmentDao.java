@@ -67,11 +67,19 @@ public class DepartmentDao implements DepartmentInterface {
 
     @Override
     public void deleteById(int id) {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM departments WHERE id=:id").addParameter("id", id).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
     public void clearAll() {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM departments").executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
