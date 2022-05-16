@@ -27,10 +27,14 @@ public class Main {
         // User
         post("/user/add", "application/json", (request, response) -> {
             User user = gson.fromJson(request.body(), User.class);
-            userDao.add(user);
-            response.status(201);
-            response.type("application/json");
-            return gson.toJson(user);
+            if (departmentDao.findById(user.getDepartment()) != null) {
+                userDao.add(user);
+                response.status(201);
+                response.type("application/json");
+                return gson.toJson(user);
+            } else {
+                return new ApiException(404, String.format("Department entered does not exist")).getMessage();
+            }
         });
 
         get("/user/:id/view", "application/json", (request, response) -> {
@@ -38,14 +42,14 @@ public class Main {
             if (user != null) {
                 return gson.toJson(user);
             } else {
-                throw new ApiException(404, String.format("User not found"));
+                return new ApiException(404, String.format("User not found")).getMessage();
             }
         });
 
         get("/view/user", "application/json", (request, response) -> {
             List<User> users = userDao.findAll(conn);
             if (users.size() < 1) {
-                throw new ApiException(404, String.format("No users found"));
+                return new ApiException(404, String.format("No users found")).getMessage();
             }
             return gson.toJson(userDao.findAll(conn));
         });
@@ -80,14 +84,14 @@ public class Main {
             if (department != null) {
                 return gson.toJson(department);
             } else {
-                throw new ApiException(404, String.format("Department not found"));
+                return new ApiException(404, String.format("Department not found")).getMessage();
             }
         });
 
         get("/view/department", "application/json", (request, response) -> {
             List<Department> departments = departmentDao.findAll(conn);
             if (departments.size() < 1) {
-                throw new ApiException(404, String.format("No departments found"));
+                return new ApiException(404, String.format("No departments found")).getMessage();
             }
             return gson.toJson(departmentDao.findAll(conn));
         });
@@ -96,7 +100,6 @@ public class Main {
             Department department = gson.fromJson(request.body(), Department.class);
             department.setId(Integer.parseInt(request.params("id")));
             departmentDao.update(Integer.parseInt(request.params("id")), department);
-            System.out.println(department.getId());
             response.status(201);
             response.type("application/json");
             return gson.toJson(department);

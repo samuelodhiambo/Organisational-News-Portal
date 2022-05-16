@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add logic to handle updating department">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add logic to handle deleting departments by id">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652737007944</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="patch: It will add logic to handle deleting departments by id">
+      <created>1652737271849</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1652737271849</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="patch: It will add members and methods for User class" />
     <MESSAGE value="patch: It will create Department class" />
     <MESSAGE value="patch: It will add members and methods for Department class" />
     <MESSAGE value="patch: It will create User Interface" />
@@ -419,7 +426,8 @@
     <MESSAGE value="patch: It will add logic to handle add department" />
     <MESSAGE value="patch: It will add logic to handle viewing all departments" />
     <MESSAGE value="patch: It will add logic to handle updating department" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add logic to handle updating department" />
+    <MESSAGE value="patch: It will add logic to handle deleting departments by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add logic to handle deleting departments by id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
