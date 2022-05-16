@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create database handler class">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add post rout for adding user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,27 +100,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrganisationalNewsPortal [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="OrganisationalNewsPortal [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,6 +142,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.moringaschool.Dao.UserDaoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="UserDaoTest.testAdd (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -193,10 +191,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserDaoTest.testAdd (1)" />
+        <item itemvalue="Gradle.OrganisationalNewsPortal [test]" />
+        <item itemvalue="Gradle.UserDaoTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.OrganisationalNewsPortal [dependencies]" />
-        <item itemvalue="Gradle.OrganisationalNewsPortal [test]" />
-        <item itemvalue="Gradle.OrganisationalNewsPortal [assemble]" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +277,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652511601275</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: It will fix database execute update exception">
+      <created>1652639508474</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652639508474</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: It will add Gson dependency">
+      <created>1652683610151</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652683610151</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,6 +316,19 @@
     <MESSAGE value="patch: It will create Department DAO implementing Department Interface" />
     <MESSAGE value="patch: It will create database init file" />
     <MESSAGE value="patch: It will create database handler class" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create database handler class" />
+    <MESSAGE value="fix: It will fix database execute update exception" />
+    <MESSAGE value="fix: It will add Gson dependency" />
+    <MESSAGE value="patch: It will add post rout for adding user" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add post rout for adding user" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

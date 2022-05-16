@@ -6,17 +6,20 @@ import com.moringaschool.Models.User;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-public class UserDaoTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+
+public class UserDaoTest {
     private Connection conn;
     private UserDao userDao;
     private DepartmentDao departmentDao;
 
-    @Before
-    public void setUp() throws Exception {
+    @Before public void setUp() throws Exception {
+        System.out.println("Done.....");
 //        String ConnectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
 //        Sql2o sql2o = new Sql2o(ConnectionString, "samian", "root");
 
@@ -26,14 +29,15 @@ public class UserDaoTest extends TestCase {
         departmentDao = new DepartmentDao(DB.sql2o);
     }
 
-    @After
-    public void tearDown() throws Exception {
+    @After public void tearDown() throws Exception {
         conn.close();
+        System.out.println("Done.....");
     }
 
     @Test
     public void testAdd() {
         User testUser = setupUser();
+        System.out.println(testUser.getUsername());
         assertEquals(testUser.getId(), testUser.getId());
     }
 
@@ -58,7 +62,6 @@ public class UserDaoTest extends TestCase {
         Department department = new Department("ICT", "ICT support services", 20);
         System.out.println(department);
         User user = new User("Samuel", "Manager", "operations", 1);
-        System.out.println(user.getDepartment());
         userDao.add(user);
         return user;
     }
