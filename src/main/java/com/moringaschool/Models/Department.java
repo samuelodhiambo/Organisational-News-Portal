@@ -4,27 +4,27 @@ import java.util.Objects;
 
 public class Department {
     private int id;
-    private String departmentName;
+    private String departmentname;
     private String description;
-    private int numberOfEmployees;
+    private int numberofemployees;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Department)) return false;
         Department that = (Department) o;
-        return getId() == that.getId() && getNumberOfEmployees() == that.getNumberOfEmployees() && getDepartmentName().equals(that.getDepartmentName()) && getDescription().equals(that.getDescription());
+        return getId() == that.getId() && getNumberofemployees() == that.getNumberofemployees() && getDepartmentname().equals(that.getDepartmentname()) && getDescription().equals(that.getDescription());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getDepartmentName(), getDescription(), getNumberOfEmployees());
+        return Objects.hash(getId(), getDepartmentname(), getDescription(), getNumberofemployees());
     }
 
-    public Department(String departmentName, String description, int numberOfEmployees) {
-        this.departmentName = departmentName;
+    public Department(String departmentname, String description, int numberofemployees) {
+        this.departmentname = departmentname;
         this.description = description;
-        this.numberOfEmployees = numberOfEmployees;
+        this.numberofemployees = numberofemployees;
     }
 
     public void setId(int id) {
@@ -35,15 +35,15 @@ public class Department {
         return id;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public String getDepartmentname() {
+        return departmentname;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public int getNumberOfEmployees() {
-        return numberOfEmployees;
+    public int getNumberofemployees() {
+        return numberofemployees;
     }
 }
