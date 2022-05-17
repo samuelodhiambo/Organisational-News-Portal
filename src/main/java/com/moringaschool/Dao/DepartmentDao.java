@@ -57,6 +57,15 @@ public class DepartmentDao implements DepartmentInterface {
     }
 
     @Override
+    public List<User> findUsersByDepartment(int department_id) {
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery("SELECT * FROM users WHERE department=:id").addParameter("id", department_id).executeAndFetch(User.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
     public void update(int id, Department department) {
         try(Connection conn = DB.sql2o.open()) {
             conn.createQuery("UPDATE departments SET departmentname=:departmentname, description=:description, numberofemployees=:numberofemployees WHERE id=:id").bind(department).executeUpdate();

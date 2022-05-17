@@ -112,5 +112,13 @@ public class Main {
             return gson.toJson(departmentDao.findAll(conn));
         });
 
+        get("/view/:departmentId/user/department", "application/json", (request, response) -> {
+            List<User> users = departmentDao.findUsersByDepartment(Integer.parseInt(request.params("departmentId")));
+            if (users.size() < 1) {
+                return new ApiException(404, String.format("No user found in this department")).getMessage();
+            }
+            return gson.toJson(users);
+        });
+
     }
 }
