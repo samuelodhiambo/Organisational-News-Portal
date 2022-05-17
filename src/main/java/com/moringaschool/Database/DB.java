@@ -32,5 +32,17 @@ public class DB {
             System.out.println(ex);
             throw new RuntimeException();
         }
+
+        try {
+            conn.createQuery("CREATE TABLE IF NOT EXISTS news (\n" +
+                    " id SERIAL PRIMARY KEY,\n" +
+                    " headline VARCHAR,\n" +
+                    " content VARCHAR,\n" +
+                    " departmentId INT\n" +
+                    ");").executeUpdate();
+        } catch (Sql2oException ex) {
+            System.out.println(ex);
+            throw new RuntimeException();
+        }
     }
 }

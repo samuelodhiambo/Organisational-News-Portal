@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add DAO and route to view users in a specific department">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/News.java" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create the News class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/NewsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Interfaces/NewsInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Database/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/News.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit3 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -400,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652792573846</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="patch: It will create the News class">
+      <created>1652792761739</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1652792761739</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +427,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="patch: It will create User Interface" />
     <MESSAGE value="patch: It will create Department Interface" />
     <MESSAGE value="patch: It will create User DAO implementing User Interface" />
     <MESSAGE value="patch: It will create Department DAO implementing Department Interface" />
@@ -440,7 +451,8 @@
     <MESSAGE value="patch: It will add logic to handle deleting departments by id" />
     <MESSAGE value="patch: It will return Exceptions messages to user instead of throwing to stdout" />
     <MESSAGE value="patch: It will add DAO and route to view users in a specific department" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add DAO and route to view users in a specific department" />
+    <MESSAGE value="patch: It will create the News class" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create the News class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

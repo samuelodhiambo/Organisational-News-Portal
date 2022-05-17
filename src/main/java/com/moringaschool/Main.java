@@ -1,10 +1,12 @@
 package com.moringaschool;
 
 import com.moringaschool.Dao.DepartmentDao;
+import com.moringaschool.Dao.NewsDao;
 import com.moringaschool.Dao.UserDao;
 import com.moringaschool.Database.DB;
 import com.moringaschool.Exceptions.ApiException;
 import com.moringaschool.Models.Department;
+import com.moringaschool.Models.News;
 import com.moringaschool.Models.User;
 
 import static spark.Spark.*;
@@ -18,6 +20,7 @@ import java.util.List;
 public class Main {
     private static UserDao userDao = new UserDao(DB.sql2o);
     private static DepartmentDao departmentDao = new DepartmentDao(DB.sql2o);
+    private static NewsDao newsDao = new NewsDao(DB.sql2o);
 
     private static Connection conn = DB.sql2o.open();
     public static void main(String[] args) {
@@ -118,6 +121,15 @@ public class Main {
                 return new ApiException(404, String.format("No user found in this department")).getMessage();
             }
             return gson.toJson(users);
+        });
+
+        // news
+        post("/news/add", "application/json", (request, response) -> {
+            News news = gson.fromJson(request.body(), News.class);
+            newsDao.add(news);
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(news);
         });
 
     }
