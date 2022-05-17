@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will return Exceptions messages to user instead of throwing to stdout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/DepartmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Interfaces/DepartmentInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Interfaces/DepartmentInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will add DAO and route to view users in a specific department">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Models/News.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652738351841</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="patch: It will add DAO and route to view users in a specific department">
+      <created>1652792573846</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1652792573846</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="patch: It will add members and methods for Department class" />
     <MESSAGE value="patch: It will create User Interface" />
     <MESSAGE value="patch: It will create Department Interface" />
     <MESSAGE value="patch: It will create User DAO implementing User Interface" />
@@ -436,7 +439,8 @@
     <MESSAGE value="patch: It will add logic to handle updating department" />
     <MESSAGE value="patch: It will add logic to handle deleting departments by id" />
     <MESSAGE value="patch: It will return Exceptions messages to user instead of throwing to stdout" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will return Exceptions messages to user instead of throwing to stdout" />
+    <MESSAGE value="patch: It will add DAO and route to view users in a specific department" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will add DAO and route to view users in a specific department" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
