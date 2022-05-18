@@ -36,6 +36,7 @@ public class UserDaoTest {
 
     @Test
     public void findAll() {
+        userDao.clearAll();
         User user1 = setupUser();
         User user2 = setupUser();
         assertEquals(2, userDao.findAll(conn).size());
