@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create routes to add and view news">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Dao/NewsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moringaschool/Main.java" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create routes to update news">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652813640182</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="patch: It will create routes to update news">
+      <created>1652855663193</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652855663193</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="patch: It will create User DAO implementing User Interface" />
     <MESSAGE value="patch: It will create Department DAO implementing Department Interface" />
     <MESSAGE value="patch: It will create database init file" />
     <MESSAGE value="patch: It will create database handler class" />
@@ -456,7 +460,8 @@
     <MESSAGE value="patch: It will add DAO and route to view users in a specific department" />
     <MESSAGE value="patch: It will create the News class" />
     <MESSAGE value="patch: It will create routes to add and view news" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create routes to add and view news" />
+    <MESSAGE value="patch: It will create routes to update news" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create routes to update news" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
