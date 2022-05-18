@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: Add route and DAO to view departmental news">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: Add tests for UserDao">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/DepartmentDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/moringaschool/Dao/UserDaoTest.java" afterDir="false" />
     </list>
@@ -89,52 +89,22 @@
       <command value="gradle assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.findAll">
-    <configuration name="UserDaoTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.moringaschool.Dao.UserDaoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserDaoTest.testAdd (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.moringaschool.Dao.UserDaoTest.testAdd&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.DepartmentDaoTest.add">
+    <configuration name="DepartmentDaoTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrganisationalNewsPortal.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moringaschool.Dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moringaschool.Dao" />
+      <option name="MAIN_CLASS_NAME" value="com.moringaschool.Dao.DepartmentDaoTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OrganisationalNewsPortal.test" />
@@ -151,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OrganisationalNewsPortal.test" />
       <extension name="coverage">
         <pattern>
@@ -161,13 +131,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.moringaschool.Dao" />
       <option name="MAIN_CLASS_NAME" value="com.moringaschool.Dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="METHOD_NAME" value="deleteById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OrganisationalNewsPortal.test" />
       <extension name="coverage">
         <pattern>
@@ -177,7 +147,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.moringaschool.Dao" />
       <option name="MAIN_CLASS_NAME" value="com.moringaschool.Dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="findAll" />
+      <option name="METHOD_NAME" value="findById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrganisationalNewsPortal.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moringaschool.Dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moringaschool.Dao" />
+      <option name="MAIN_CLASS_NAME" value="com.moringaschool.Dao.UserDaoTest" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest.findAll" />
-        <item itemvalue="JUnit.UserDaoTest.add" />
+        <item itemvalue="JUnit.DepartmentDaoTest.add" />
         <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="Gradle.UserDaoTest (1)" />
-        <item itemvalue="Gradle.UserDaoTest.testAdd (1)" />
+        <item itemvalue="JUnit.UserDaoTest.deleteById" />
+        <item itemvalue="JUnit.UserDaoTest.update" />
+        <item itemvalue="JUnit.UserDaoTest.findById" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652857097794</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="patch: Add tests for UserDao">
+      <created>1652858861857</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1652858861857</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: It will add Gson dependency" />
     <MESSAGE value="patch: It will add post rout for adding user" />
     <MESSAGE value="patch: It will add post route for adding user" />
     <MESSAGE value="patch: It will optimize insertion query" />
@@ -487,7 +479,8 @@
     <MESSAGE value="patch: Add route to delete news by id" />
     <MESSAGE value="patch: Add route to view all news" />
     <MESSAGE value="patch: Add route and DAO to view departmental news" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: Add route and DAO to view departmental news" />
+    <MESSAGE value="patch: Add tests for UserDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: Add tests for UserDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
