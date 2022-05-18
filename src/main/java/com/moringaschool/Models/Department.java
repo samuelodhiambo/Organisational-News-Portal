@@ -8,6 +8,12 @@ public class Department {
     private String description;
     private int numberofemployees;
 
+    public Department(String departmentname, String description, int numberofemployees) {
+        this.departmentname = departmentname;
+        this.description = description;
+        this.numberofemployees = numberofemployees;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -19,12 +25,6 @@ public class Department {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getDepartmentname(), getDescription(), getNumberofemployees());
-    }
-
-    public Department(String departmentname, String description, int numberofemployees) {
-        this.departmentname = departmentname;
-        this.description = description;
-        this.numberofemployees = numberofemployees;
     }
 
     public void setId(int id) {

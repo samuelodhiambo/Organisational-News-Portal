@@ -21,12 +21,12 @@ public class User {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return getId() == user.getId() && department == user.department && getUsername().equals(user.getUsername()) && getPosition().equals(user.getPosition()) && getRole().equals(user.getRole());
+        return getId() == user.getId() && getDepartment() == user.getDepartment() && getUsername().equals(user.getUsername()) && getPosition().equals(user.getPosition()) && getRole().equals(user.getRole());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getPosition(), getRole(), department);
+        return Objects.hash(getId(), getUsername(), getPosition(), getRole(), getDepartment());
     }
 
     public void setId(int id) {

@@ -3,6 +3,8 @@ package com.moringaschool.Models;
 import com.moringaschool.Dao.DepartmentDao;
 import com.moringaschool.Database.DB;
 
+import java.util.Objects;
+
 public class News {
     private int id;
     private String headline;
@@ -16,6 +18,19 @@ public class News {
         this.headline = headline;
         this.content = content;
         this.departmentId = departmentId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof News)) return false;
+        News news = (News) o;
+        return getId() == news.getId() && getDepartmentId() == news.getDepartmentId() && getHeadline().equals(news.getHeadline()) && getContent().equals(news.getContent());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getHeadline(), getContent(), getDepartmentId());
     }
 
     public String getHeadline() {
