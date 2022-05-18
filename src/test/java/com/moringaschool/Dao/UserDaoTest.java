@@ -3,63 +3,77 @@ package com.moringaschool.Dao;
 import com.moringaschool.Database.DB;
 import com.moringaschool.Models.Department;
 import com.moringaschool.Models.User;
-import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.sql2o.Connection;
-import org.sql2o.Sql2o;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.*;
 
 public class UserDaoTest {
     private Connection conn;
     private UserDao userDao;
     private DepartmentDao departmentDao;
 
-    @Before public void setUp() throws Exception {
-        System.out.println("Done.....");
-//        String ConnectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-//        Sql2o sql2o = new Sql2o(ConnectionString, "samian", "root");
-
+    @Before
+    public void setUp() throws Exception {
         conn = DB.sql2o.open();
         DB.createTables(conn);
         userDao = new UserDao(DB.sql2o);
         departmentDao = new DepartmentDao(DB.sql2o);
     }
 
-    @After public void tearDown() throws Exception {
+    @After
+    public void tearDown() throws Exception {
         conn.close();
-        System.out.println("Done.....");
     }
 
     @Test
-    public void testAdd() {
+    public void add() {
         User testUser = setupUser();
-        System.out.println(testUser.getUsername());
         assertEquals(testUser.getId(), testUser.getId());
     }
 
-    public void testFindAll() {
+    @Test
+    public void findAll() {
+        User user1 = setupUser();
+        User user2 = setupUser();
+        assertEquals(2, userDao.findAll(conn).size());
     }
 
-    public void testFindById() {
+    @Test
+    public void findById() {
+        User user = setupUser();
+        User foundUser = userDao.findById(user.getId());
+        assertEquals(user, foundUser);
     }
 
-    public void testUpdate() {
+    @Test
+    public void update() {
+        User user = setupUser();
+        User updatedUser = new User("Samuel Ian", "Manager", "operations", 1);
+        updatedUser.setId(user.getId());
+        userDao.update(user.getId(), updatedUser);
+        assertEquals(user.getId(), updatedUser.getId());
     }
 
-    public void testDeleteById() {
+    @Test
+    public void deleteById() {
+        User user = setupUser();
+        userDao.deleteById(user.getId());
+        assertEquals(null, userDao.findById(user.getId()));
     }
 
-    public void testClearAll() {
+    @Test
+    public void clearAll() {
+        userDao.clearAll();
+        assertEquals(0, userDao.findAll(conn).size());
     }
 
     // helpers
-
     public User setupUser() {
         Department department = new Department("ICT", "ICT support services", 20);
+        departmentDao.add(department);
         System.out.println(department);
         User user = new User("Samuel", "Manager", "operations", 1);
         userDao.add(user);
