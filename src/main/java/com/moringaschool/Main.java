@@ -141,5 +141,10 @@ public class Main {
             return gson.toJson(news);
         });
 
+        get("news/:id/delete", "application/json", (request, response) -> {
+            newsDao.deleteById(Integer.parseInt(request.params("id")));
+            return gson.toJson(newsDao.findAll(conn));
+        });
+
     }
 }
