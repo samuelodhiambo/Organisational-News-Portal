@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: It will create routes to update news">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="4d4cf993-363d-4331-8194-3bc695cfe923" name="Changes" comment="patch: Add route to delete news by id" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -421,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652855663193</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="doc: It will add README documentation">
+      <created>1652855991477</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1652855991477</updated>
+    </task>
+    <task id="LOCAL-00033" summary="patch: Add route to delete news by id">
+      <created>1652856313996</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1652856313996</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="patch: It will create Department DAO implementing Department Interface" />
-    <MESSAGE value="patch: It will create database init file" />
     <MESSAGE value="patch: It will create database handler class" />
     <MESSAGE value="fix: It will fix database execute update exception" />
     <MESSAGE value="fix: It will add Gson dependency" />
@@ -461,7 +471,9 @@
     <MESSAGE value="patch: It will create the News class" />
     <MESSAGE value="patch: It will create routes to add and view news" />
     <MESSAGE value="patch: It will create routes to update news" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch: It will create routes to update news" />
+    <MESSAGE value="doc: It will add README documentation" />
+    <MESSAGE value="patch: Add route to delete news by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch: Add route to delete news by id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

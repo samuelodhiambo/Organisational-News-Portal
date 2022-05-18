@@ -146,5 +146,13 @@ public class Main {
             return gson.toJson(newsDao.findAll(conn));
         });
 
+        get("news/view", "application/json", (request, response) -> {
+            List<News> news = newsDao.findAll(conn);
+            if (news.size() < 1) {
+                return new ApiException(404, String.format("No news found")).getMessage();
+            }
+            return gson.toJson(news);
+        });
+
     }
 }
