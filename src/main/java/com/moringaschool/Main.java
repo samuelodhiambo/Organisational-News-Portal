@@ -154,5 +154,13 @@ public class Main {
             return gson.toJson(news);
         });
 
+        get("department/:id/news/view", "application/json", (request, response) -> {
+            List<News> news = newsDao.findDepartmentNews(Integer.parseInt(request.params("id")));
+            if (news.size() < 1) {
+                return new ApiException(404, String.format("No news for specified found")).getMessage();
+            }
+            return gson.toJson(news);
+        });
+
     }
 }

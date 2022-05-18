@@ -65,7 +65,11 @@ public class NewsDao implements NewsInterface {
 
     @Override
     public List<News> findDepartmentNews(int department_id) {
-        return null;
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery("SELECT * FROM news WHERE departmentid=:departmentid").addParameter("departmentid", department_id).executeAndFetch(News.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
