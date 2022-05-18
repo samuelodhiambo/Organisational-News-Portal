@@ -132,5 +132,14 @@ public class Main {
             return gson.toJson(news);
         });
 
+        post("/news/:id/update", "application/json", (request, response) -> {
+            News news = gson.fromJson(request.body(), News.class);
+            news.setId(Integer.parseInt(request.params("id")));
+            newsDao.update(Integer.parseInt(request.params("id")), news);
+            response.status(201);
+            response.type("application/json");
+            return gson.toJson(news);
+        });
+
     }
 }

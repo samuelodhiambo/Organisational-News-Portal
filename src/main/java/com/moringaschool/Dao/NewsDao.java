@@ -38,17 +38,29 @@ public class NewsDao implements NewsInterface {
 
     @Override
     public News findById(int id) {
-        return null;
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery("SELECT * FROM news WHERE id=:id").addParameter("id", id).executeAndFetchFirst(News.class);
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
     public void update(int id, News news) {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("UPDATE news SET headline=:headline, content=:content, departmentId=:departmentId WHERE id=:id").addParameter("id", id).bind(news).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
     public void deleteById(int id) {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM news WHERE id=:id").addParameter("id", id).executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
