@@ -74,6 +74,10 @@ public class NewsDao implements NewsInterface {
 
     @Override
     public void clearAll() {
-
+        try(Connection conn = DB.sql2o.open()) {
+            conn.createQuery("DELETE FROM news").executeUpdate();
+        } catch (Sql2oException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
